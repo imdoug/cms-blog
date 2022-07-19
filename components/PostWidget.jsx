@@ -8,7 +8,7 @@ const PostWidget = ({ categories, slug }) => {
   const [relatedPosts, setrelatedPosts] = useState([])
   useEffect(() => {
     if(slug){
-      getSimilarPosts(categories,slug)
+      getSimilarPosts(categories, slug)
       .then((result) =>{
         setrelatedPosts(result)
       })
@@ -19,9 +19,6 @@ const PostWidget = ({ categories, slug }) => {
       })
     }
   }, [slug])
-
-  console.log(relatedPosts)
-  
   return (
     <div className='bg-white shadow-lg rounded-lg p-8 mb-8'>
       <h3 className='text-xl mb-8 font-semibold border-b pb-4'>
