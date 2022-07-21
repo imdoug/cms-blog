@@ -1,2 +1,2 @@
-export { default as FeaturedPosts} from './featuredPost'
-export { default as AdjacentsPosts} from './AdjacentsPost'
+export { default as FeaturedPost} from './featuredPost'
+export { default as AdjacentsPost} from './AdjacentsPost'
