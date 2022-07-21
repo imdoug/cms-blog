@@ -13,15 +13,16 @@ const Comments = ({slug}) => {
   
   return (
     <>
-      {comments.length > 0 &&  
-      <div className='bg-white shadow-lg rounded-lg p-8 pb-12 mb-8'>
-        <h3 className='te4xt-xl mb-9   font-semibold border-b  pb-4'>
+      {comments.length > 0 &&  <>
+      {/* <div className='bg-white shadow-lg rounded-lg p-8 pb-12 mb-8'> */}
+        <h3 className='te4xt-xl mb-4 ml-8 mt-10 text-yellow-700 text-opacity-40  font-semibold pb-4'>
           {comments.length}
           {' '}
           Comments
         </h3>
         {comments.map((comment) =>(
-          <div key={comment.createdAt} className="border-b border-gray-100 mb-4 pb-4">
+          <div className='bg-white shadow-lg rounded-lg p-8 pb-2 mb-8'>
+          <div key={comment.createdAt} className=" mb-4 pb-4">
             <p className='mb-4'>
               <span className='font-semibold'>
                 {comment.name}
@@ -35,8 +36,10 @@ const Comments = ({slug}) => {
               {parse(comment.comment)}
             </p>
           </div>
+          </div>
         ))}
-      </div>}
+      {/* </div> */}
+      </>}
     </>
   )
 }

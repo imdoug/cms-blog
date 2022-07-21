@@ -51,21 +51,21 @@ const CommentsForm = ({slug}) => {
 
   return (
     <div className='bg-white shadow-lg rounded-lg p-8 pb-12 mb-8'>
-      <h3 className='text-xl mb-8 font-semibold border-b pb-4'>Leave a Comment</h3>
+      <h3 className='text-xl mb-8 font-semibold border-b border-yellow-700 border-opacity-40 pb-4'>Leave a Comment</h3>
       <div className='grid grid-cols-2 gap-4 mb-4'>
         <input 
           name="name"
           placeholder='Name'
           type={'text'} 
           ref={nameEl}
-          className="py-2 px-4 outlined-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
+          className="py-2 px-4 outline-none w-full rounded-lg focus:ring-1 focus:ring-yellow-700 focus:ring-opacity-40 bg-yellow-700 bg-opacity-10 text-gray-700"
         />
          <input 
           name="email"
           placeholder='Email'
           type={'text'} 
           ref={emailEl}
-          className="py-2 px-4 outlined-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
+          className="py-2 px-4 outline-none w-full rounded-lg focus:ring-1 focus:ring-yellow-700 focus:ring-opacity-40 bg-yellow-700 bg-opacity-10 text-gray-700"
         />
       </div>
       <div className='grid grid-cols-1 gap-4 mb-4'>
@@ -73,7 +73,7 @@ const CommentsForm = ({slug}) => {
           name='comment'
           placeholder='Comment...'
           ref={commentEl} 
-          className="p-4 outlined-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
+          className="p-4 outline-none w-full rounded-lg focus:ring-1 focus:ring-yellow-700 focus:ring-opacity-40 bg-yellow-700 bg-opacity-10 text-gray-700"
         />
       </div>
       <div className='grid grid-cols-1 gap-4 mb-4'>
@@ -87,7 +87,7 @@ const CommentsForm = ({slug}) => {
         <button
           type='button' 
           onClick={handleCommentSubmission}
-          className="transition duration-500 ease hover:bg-indigo-900 inline-block bg-pink-600 text-lg rounded-full text-white px-8 py-3 cursor-pointer"
+          className="transition duration-500 ease hover:bg-yellow-700 inline-block bg-yellow-700 bg-opacity-40 text-lg rounded-2xl text-white px-8 py-3 cursor-pointer"
         >
           Post Comment
         </button>

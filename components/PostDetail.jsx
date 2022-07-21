@@ -7,15 +7,15 @@ const PostDetail = ({ post }) => {
 
     if (obj) {
       if (obj.bold) {
-        modifiedText = (<b key={index}>{text}</b>);
+        modifiedText = (<b  clas key={index}>{text}</b>);
       }
 
       if (obj.italic) {
-        modifiedText = (<em key={index}>{text}</em>);
+        modifiedText = (<em  key={index}>{text}</em>);
       }
 
       if (obj.underline) {
-        modifiedText = (<u key={index}>{text}</u>);
+        modifiedText = (<u  key={index}>{text}</u>);
       }
     }
 
@@ -67,7 +67,7 @@ const PostDetail = ({ post }) => {
           <div className="font-medium text-gray-700">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 inline mr-2 text-pink-500"
+              className="h-6 w-6 inline mr-2 text-yellow-700 text-opacity-40"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -83,12 +83,14 @@ const PostDetail = ({ post }) => {
           </div>
         </div>
       </div>
-      <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
+      <h1 className="mb-8 text-3xl font-semibold px-8">{post.title}</h1>
+      <div className=" item-center mb-8 w-full px-8">
       {post.content.raw.children.map((typeObj, index)=>{
         const children = typeObj.children.map((item, itemIndex)=> getContentFragment(itemIndex, item.text))
 
         return getContentFragment(index, children, typeObj, typeObj.type)
       })}
+      </div>
     </div>
   );
 };
