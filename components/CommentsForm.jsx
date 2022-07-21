@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react'
-import { submitComent } from '../services'
+import { submitComment } from '../services'
 
 const CommentsForm = ({slug}) => {
   const [error, setError] = useState(null)
@@ -40,7 +40,7 @@ const CommentsForm = ({slug}) => {
       window.localStorage.removeItem('email', email)
     }
 
-    submitComent(commentObj)
+    submitComment(commentObj)
       .then((res)=>{
         setshowSucessMessage(true);
         setTimeout(() => {
